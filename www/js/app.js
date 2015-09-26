@@ -42,12 +42,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           console.log('mixpanel alias success')
 
 
+
+    mixpanel.track('Account Created', {'Account Type':'Paid'});
+
       }, function(error){
                   console.log('mixpanel alias error')
 
 
       })
 
+   mixpanel.people.set({'$places_viewed':100});
 
 
    mixpanel.people.set({'First Login Date':new Date()});
@@ -70,15 +74,31 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
        
 //crashes
-    mixpanel.showSurvey(function(success){
-          console.log('mixpanel survey success')
+  //   mixpanel.showSurvey(function(success){
+  //         console.log('mixpanel survey success')
 
 
-      }, function(error){
-                  console.log('mixpanel survey error')
+  //     }, function(error){
+  //                 console.log('mixpanel survey error')
 
 
-      });
+  //     });
+
+
+
+
+  // });
+
+
+    // mixpanel.showNotification(function(success){
+    //       console.log('mixpanel showNotification success')
+
+
+    //   }, function(error){
+    //               console.log('mixpanel showNotification error')
+
+
+    //   });
 
 
 

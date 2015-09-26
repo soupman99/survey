@@ -56,4 +56,20 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+
+        mixpanel.track("test view", {'page':'fake page title'}, function(success){
+          console.log('mixpanel track success')
+
+
+      }, function(error){
+                  console.log('mixpanel track error')
+
+
+      })
+
+
+       mixpanel.flush();
+
+
+       
 });
