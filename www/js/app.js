@@ -37,9 +37,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
       })
 
-
+console.log(JSON.stringify(ionic.Platform.device()))
      mixpanel.people.identify(ionic.Platform.device().uuid, function(success){
-          console.log('mixpanel alias success')
+          console.log('mixpanel identify success')
 
 
 
